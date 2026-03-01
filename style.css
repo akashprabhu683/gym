@@ -155,19 +155,29 @@ h1, h2, h3, .logo {
    HERO
 ======================= */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
+    padding-top: 120px; /* navbar compensation */
+    padding-bottom: 80px;
     padding: 0 10%;
     display: flex;
     align-items: center;
     position: relative;
     margin-bottom: -1px;
-}
-
-.hero {
-    display: flex;
-    align-items: center;
     justify-content: space-between;
     gap: 80px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 140px; /* mobile navbar */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding-top: 100px; /* very small phones */
+    }
 }
 
 .hero-content {
@@ -320,6 +330,14 @@ section::before {
     left: -120px;
 }
 
+@media (max-width: 480px) {
+    body::before, body::after {
+        width: 180px;
+        height: 180px;
+        filter: blur(80px);
+    }
+}
+
 /* =======================
    SECTION TITLES
 ======================= */
@@ -435,9 +453,10 @@ section::before {
    SERVICES GRID
 ======================= */
 .service-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: center;
     gap: 32px;
+    flex-wrap: wrap;
 }
 
 /* =======================
@@ -478,12 +497,6 @@ section::before {
 /* =======================
    MOBILE
 ======================= */
-@media (max-width: 1024px) {
-    .service-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 @media (max-width: 768px) {
     .navbar {
         padding: 16px 6%;
@@ -515,6 +528,18 @@ section::before {
     }
 }
 
+@media (max-width: 768px) {
+    .nav-links a {
+        padding: 14px 0;
+        font-size: 1.1rem;
+    }
+
+    .btn-join {
+        width: auto;
+        padding: 12px 32px;
+    }
+}
+
 /* Hide hamburger on desktop */
 @media (min-width: 769px) {
     .menu-toggle {
@@ -522,15 +547,60 @@ section::before {
     }
 }
 
+.hero-btns {
+    display: flex;
+    gap: 24px;
+}
+
 @media (max-width: 600px) {
-    .service-grid {
-        grid-template-columns: 1fr;
+    .hero-btns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-btns a {
+        width: 100%;
+        max-width: 260px;
+        text-align: center;
     }
 }
 
-/* Center service cards when row is not full */
-.service-grid {
-    justify-items: center;
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.4rem;
+        line-height: 1.2;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 80px 6%;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-card {
+        padding: 36px 28px;
+    }
+
+    .contact-card h3 {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer h4 {
+        font-size: 0.85rem;
+    }
+
+    .footer-about p,
+    .footer-links a {
+        font-size: 0.8rem;
+    }
 }
 
 .service-card {
@@ -547,13 +617,6 @@ section::before {
 }
 
 /* === FIX: CENTER CARD LAYOUT HORIZONTALLY === */
-.service-grid {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    flex-wrap: wrap;
-}
-
 .service-card,
 .trainer-card,
 .price-card,
