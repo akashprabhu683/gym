@@ -866,7 +866,7 @@ section::before {
         width: 100%;
         max-height: calc(100vh - 70px); /* prevent overflow */
         overflow-y: auto;
-        background: var(--glass-bg);
+        background: black;
         backdrop-filter: blur(18px);
         flex-direction: column;
         padding: 16px 0;
@@ -902,3 +902,4 @@ section::before {
         gap: 12px; /* smaller spacing */
     }
 }
+
