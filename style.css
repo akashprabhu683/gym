@@ -856,3 +856,49 @@ section::before {
     margin: 0px;
     padding-bottom: 0;
 }
+
+/* ======================= MOBILE NAVIGATION FIX ======================= */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        max-height: calc(100vh - 70px); /* prevent overflow */
+        overflow-y: auto;
+        background: var(--glass-bg);
+        backdrop-filter: blur(18px);
+        flex-direction: column;
+        padding: 16px 0;
+        display: none;
+        z-index: 999;
+    }
+
+    .nav-links a {
+        padding: 10px 16px; /* smaller padding */
+        font-size: 0.95rem; /* smaller font */
+        text-align: center;
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .btn-join {
+        width: auto;
+        padding: 10px 28px;
+        font-size: 0.95rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
+}
+
+/* Optional: reduce gap between nav links in mobile */
+@media (max-width: 600px) {
+    .nav-links {
+        gap: 12px; /* smaller spacing */
+    }
+}
