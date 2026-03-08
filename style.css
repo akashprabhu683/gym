@@ -837,7 +837,8 @@ section {
     padding: 56px 40px;
     border-radius: 24px;
     border: 1px solid var(--border);
-    width: 320px;
+    width: 100%;
+    max-width: 320px;
     text-align: center;
     transition: var(--t);
     position: relative;
@@ -1384,7 +1385,7 @@ section {
         flex: 1 1 100%;
         max-width: 100%;
         padding: 40px 20px;
-        min-width: 100%;
+        min-width: 0;
     }
 
     .contact-grid {
@@ -1399,10 +1400,21 @@ section {
         padding: 80px 6%;
     }
 
+    .about-visual {
+        margin: 0 -3%;
+    }
+
+    .about-img-frame {
+        border-radius: 15px;
+    }
+
     .about-floating-card {
-        right: 10px;
+        right: 0;
         bottom: -20px;
         padding: 16px 20px;
+        width: 90%;
+        left: 5%;
+        margin: auto;
     }
 }
 
@@ -1440,7 +1452,21 @@ section {
         border-bottom: 1px solid var(--border);
     }
 
+    .price-card {
+        padding: 40px 20px;
+    }
+
     .price {
         font-size: 3rem;
     }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
 }
