@@ -5,18 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FITNESS FREAKS | Elite Performance</title>
-
-    <!-- Fonts -->
+    <meta name="description"
+        content="Fitness Freaks – Elite gym with expert coaches, premium programs, and real results." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;800&display=swap"
         rel="stylesheet" />
-
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Icons + GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -24,18 +20,12 @@
 
 <body>
 
-    <!-- PRELOADER -->
-    <div id="preloader">
-        <div class="loader-content">
-            <div class="percentage-container">
-                <span id="load-percentage">0</span>%
-            </div>
 
-            <div class="loading-bar-bg">
-                <div id="loading-bar"></div>
-            </div>
-        </div>
-    </div>
+
+    <!-- BACK TO TOP -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i data-lucide="arrow-up"></i>
+    </button>
 
     <!-- NAVBAR -->
     <header class="navbar">
@@ -43,362 +33,419 @@
             <i data-lucide="dumbbell"></i>
             <span>FITNESS FREAKS</span>
         </div>
-
         <nav class="nav-links">
             <a href="#home">Home</a>
-            <a href="#services">Services</a>
             <a href="#metrics">Metrics</a>
+            <a href="#services">Programs</a>
+            <a href="#gallery">Gallery</a>
             <a href="#coaches">Coaches</a>
+            <a href="#transformations">Transformations</a>
             <a href="#pricing">Pricing</a>
             <a href="#reviews">Reviews</a>
             <a href="#contact">Contact</a>
-            <a href="#footer">About</a>
-            <a href="#join" class="btn-join">Join Now</a>
+            <a href="#about">About</a>
+            <a href="#pricing" class="btn-join">Join Now</a>
         </nav>
-
-        <div class="menu-toggle">
-            <i data-lucide="menu"></i>
-        </div>
+        <div class="menu-toggle"><i data-lucide="menu"></i></div>
     </header>
 
     <main>
 
-        <!-- HERO (UPDATED TEXT + STRUCTURE) -->
+        <!-- HERO -->
         <section id="home" class="hero">
             <div class="hero-overlay"></div>
+            <div class="hero-bg-img">
+                <img src="17021349327521.jpg" alt="Gym floor" class="hero-bg-real" />
+            </div>
             <div class="hero-content">
-                <h1 class="hero-title">
-                    FORGE AN <span class="gradient-text">UNSTOPPABLE</span> BODY
-                </h1>
-                <p class="hero-subtitle">
-                    Elite coaching, intelligent training, and a mindset built for domination.
-                </p>
+                <p class="hero-eyebrow">CHENNAI'S ELITE TRAINING HUB</p>
+                <h1 class="hero-title">FORGE AN<br><span class="gradient-text">UNSTOPPABLE</span><br>BODY</h1>
+                <p class="hero-subtitle">Elite coaching &middot; Intelligent training &middot; Built for domination.</p>
+                <p class="hero-motivation">"Unleash the Arnold Schwarzenegger in you"</p>
                 <div class="hero-btns">
                     <a href="#pricing" class="btn-primary">Start Training</a>
                     <a href="#services" class="btn-secondary">Explore Programs</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                    <img src="gym_about_bg.png" alt="Athlete training">
-                </div>
-        </section>
-
-        <!-- SERVICES -->
-        <section id="services" class="services">
-            <h2 class="section-title">CORE PROGRAMS</h2>
-
-            <div class="service-grid">
-                <div class="service-card">
-                    <i data-lucide="flame"></i>
-                    <h3>Fat Loss</h3>
-                    <p>
-                        Structured, science-backed fat loss programs designed to reduce body fat
-                        while preserving lean muscle. Focused on sustainable results through
-                        smart training, recovery, and consistency.
-                    </p>
-                    <p>
-                        Includes metabolic workouts, calorie-efficient routines, and guidance
-                        to help you stay energized and disciplined throughout your journey.
-                    </p>
-                </div>
-
-                <div class="service-card active">
-                    <i data-lucide="dumbbell"></i>
-                    <h3>Strength</h3>
-                    <p>
-                        Progressive overload-based strength training built to increase power,
-                        muscle density, and overall performance using proven lifting principles.
-                    </p>
-                    <p>
-                        Emphasis on compound movements, form mastery, and structured progression
-                        to help you build real, measurable strength over time.
-                    </p>
-                </div>
-
-                <div class="service-card">
-                    <i data-lucide="activity"></i>
-                    <h3>Conditioning</h3>
-                    <p>
-                        High-performance conditioning programs focused on endurance, speed,
-                        agility, and cardiovascular efficiency for athletic performance.
-                    </p>
-                    <p>
-                        Combines functional movements, interval training, and stamina-building
-                        drills to improve overall fitness and physical resilience.
-                    </p>
                 </div>
             </div>
         </section>
 
         <!-- METRICS -->
         <section class="metrics" id="metrics">
-            <div style="display: block; margin: 80px; margin-bottom: 0px;">
-            <h2 class="section-title">Metrics</h2>
+            <h2 class="section-title">METRICS</h2>
+            <div class="metrics-grid">
+                <div class="metric">
+                    <div class="metric-border"></div>
+                    <h3 class="count" data-target="98" data-suffix="%">0%</h3>
+                    <p>Success Rate</p>
+                </div>
+                <div class="metric">
+                    <div class="metric-border"></div>
+                    <h3 class="count" data-target="10000" data-suffix="+">0+</h3>
+                    <p>Training Hours</p>
+                </div>
+                <div class="metric">
+                    <div class="metric-border"></div>
+                    <h3 class="count" data-target="500" data-suffix="+">0+</h3>
+                    <p>Members Transformed</p>
+                </div>
+                <div class="metric">
+                    <div class="metric-border"></div>
+                    <h3 class="count" data-target="50" data-suffix="+">0+</h3>
+                    <p>Elite Athletes</p>
+                </div>
             </div>
-            <div class="trainer-grid">
-            <div class="metric">
-                <h3>98%</h3>
-                <p>Success Rate</p>
+        </section>
+
+        <!-- SERVICES / PROGRAMS -->
+        <section id="services" class="services">
+            <h2 class="section-title">CORE PROGRAMS</h2>
+            <div class="service-grid">
+
+                <div class="service-card">
+                    <div class="card-img">
+                        <img src="overweight-squeeze-belly-fat-with-measure-tape-her-neck_1150-34777.avif"
+                            alt="Fat Loss" />
+                    </div>
+                    <div class="card-body">
+                        <i data-lucide="flame"></i>
+                        <h3>Fat Loss</h3>
+                        <p>Science-backed programs to shred fat while preserving lean muscle.</p>
+                    </div>
+                </div>
+
+                <div class="service-card active">
+                    <div class="card-img">
+                        <img src="pngtree-defined-muscles-on-a-bodybuilder-during-bicep-training-with-weights-png-image_14337309.png"
+                            alt="Strength" />
+                    </div>
+                    <div class="card-body">
+                        <i data-lucide="dumbbell"></i>
+                        <h3>Strength</h3>
+                        <p>Progressive overload training to build real, measurable power.</p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="card-img">
+                        <img src="strength-and-conditioning-exercises.jpg" alt="Conditioning" />
+                    </div>
+                    <div class="card-body">
+                        <i data-lucide="activity"></i>
+                        <h3>Conditioning</h3>
+                        <p>High-performance cardio and agility for peak athletic output.</p>
+                    </div>
+                </div>
+
             </div>
-            <div class="metric">
-                <h3>10K+</h3>
-                <p>Training Hours</p>
-            </div>
-            <div class="metric">
-                <h3>50+</h3>
-                <p>Elite Athletes</p>
-            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section id="gallery" class="gallery-section">
+            <h2 class="section-title">INSIDE THE GYM</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="modern-fitness-center-interior-black-and-yellow-gym-equipment-weight-machines-and-dumbbells-photo.jpeg"
+                        alt="Training Floor" />
+                    <span class="gallery-label">Training Floor</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG_4899.webp" alt="Weight room" />
+                    <span class="gallery-label">Weight Room</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="istockphoto-856797530-612x612.jpg" alt="Cardio" />
+                    <span class="gallery-label">Cardio Zone</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="691be4721a7b607e842c3a77_66161bf69e5dcc0b31ced6d7_alo-moves.jpg" alt="Group" />
+                    <span class="gallery-label">Group Training</span>
+                </div>
+                <div class="gallery-item">
+                    <img src="fit_woman_doing_a_dumbbell_lunge_in_the_gym.webp" alt="Personal" />
+                    <span class="gallery-label">Personal Training</span>
+                </div>
             </div>
         </section>
 
         <!-- COACHES -->
         <section id="coaches" class="trainers">
             <h2 class="section-title">ELITE COACHES</h2>
-
             <div class="trainer-grid">
+
                 <div class="trainer-card">
-                    <h3>Strength Specialist</h3>
-                    <p>
-                        Expert in building raw strength, muscle mass, and lifting efficiency
-                        using proven progressive overload techniques.
-                    </p>
-                    <p>
-                        Focuses on compound lifts, form correction, and long-term performance
-                        tracking to help athletes and lifters reach peak power safely.
-                    </p>
-                    <p>
-                        <strong>Specializes in:</strong> Powerlifting, hypertrophy, strength cycles,
-                        injury prevention.
-                    </p>
+                    <div class="coach-img">
+                        <img src="istockphoto-856797530-612x612.jpg" alt="Strength Coach" />
+                    </div>
+                    <div class="coach-body">
+                        <h3>Strength Specialist</h3>
+                        <p class="coach-tags">Powerlifting &middot; Hypertrophy &middot; Injury Prevention</p>
+                        <p class="coach-bio">Expert in building raw strength and muscle mass using proven progressive
+                            overload techniques. A special woman trainer for womens.</p>
+                    </div>
                 </div>
 
                 <div class="trainer-card">
-                    <h3>HIIT & Conditioning</h3>
-                    <p>
-                        Delivers high-intensity training systems designed to burn fat, boost
-                        endurance, and enhance athletic conditioning.
-                    </p>
-                    <p>
-                        Combines interval-based cardio, functional movements, and metabolic
-                        circuits to push limits while maximizing efficiency.
-                    </p>
-                    <p>
-                        <strong>Specializes in:</strong> HIIT, fat loss, endurance training,
-                        performance conditioning.
-                    </p>
+                    <div class="coach-img">
+                        <img src="young-adult-doing-indoor-sport-gym_23-2149205542.avif" alt="HIIT Coach" />
+                    </div>
+                    <div class="coach-body">
+                        <h3>HIIT &amp; Conditioning</h3>
+                        <p class="coach-tags">Fat Loss &middot; Endurance &middot; Metabolic Circuits</p>
+                        <p class="coach-bio">High-intensity conditioning specialist delivering training systems designed
+                            to burn fat.</p>
+                    </div>
                 </div>
 
                 <div class="trainer-card">
-                    <h3>Mobility & Rehab</h3>
-                    <p>
-                        Dedicated to improving joint health, flexibility, and movement quality
-                        through targeted mobility and recovery programs.
-                    </p>
-                    <p>
-                        Ideal for reducing pain, preventing injuries, and supporting recovery
-                        from intense training or previous physical limitations.
-                    </p>
-                    <p>
-                        <strong>Specializes in:</strong> Mobility flows, recovery protocols,
-                        corrective exercise, rehabilitation support.
-                    </p>
+                    <div class="coach-img">
+                        <img src="african-male-fitness-trainer-in-gym-fitness-and-wellness-african-american-coach-healthy-lifestyle-photo.jpg"
+                            alt="Conditioning Coach" />
+                    </div>
+                    <div class="coach-body">
+                        <h3>Mobility &amp; Rehab</h3>
+                        <p class="coach-tags">Flexibility &middot; Recovery &middot; Corrective Exercise</p>
+                        <p class="coach-bio">Dedicated to improving joint health, movement quality, and long-term
+                            physical resilience.</p>
+                    </div>
                 </div>
+
+            </div>
+        </section>
+
+        <!-- TRANSFORMATIONS -->
+        <section id="transformations" class="transformations">
+            <h2 class="section-title">TRANSFORMATIONS</h2>
+            <div class="transform-grid">
+
+                <div class="transform-card">
+                    <div class="transform-imgs single">
+                        <img src="360_F_841885510_SqTTRFiJBS4S77zG5pQUVgKkzKZjOPrV.jpg" alt="Fat Loss Transformation"
+                            class="transform-img" />
+                    </div>
+                    <div class="transform-info">
+                        <span class="transform-label">12 Weeks &middot; Fat Loss</span>
+                        <p>-18 kg Body Fat</p>
+                    </div>
+                </div>
+
+                <div class="transform-card">
+                    <div class="transform-imgs single">
+                        <img src="sddefault.jpg" alt="Strength Transformation" class="transform-img" />
+                    </div>
+                    <div class="transform-info">
+                        <span class="transform-label">16 Weeks &middot; Strength</span>
+                        <p>+25 kg Total Lift</p>
+                    </div>
+                </div>
+
+                <div class="transform-card">
+                    <div class="transform-imgs">
+                        <img src="gym_hero_bg.png" alt="Before" class="transform-img" />
+                        <img src="gym_about_bg.png" alt="After" class="transform-img" />
+                    </div>
+                    <div class="transform-info">
+                        <span class="transform-label">8 Weeks &middot; Conditioning</span>
+                        <p>5K to 10K Finisher</p>
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <!-- PRICING -->
         <section id="pricing" class="pricing">
             <h2 class="section-title">MEMBERSHIP PLANS</h2>
-
+            <p class="section-sub">Pick a plan that matches your goals. No lock-ins. Cancel anytime.</p>
             <div class="pricing-grid">
+
                 <div class="price-card">
                     <h3>Basic</h3>
-                    <p class="price">₹999 / mo</p>
-                    <p>
-                        Ideal for beginners who want consistent access to quality equipment
-                        and a focused training environment.
-                    </p>
+                    <p class="price">&#8377;999 <span>/ mo</span></p>
                     <ul>
                         <li>Full Gym Access</li>
-                        <li>Dedicated Cardio Zone</li>
-                        <li>Locker Room Access</li>
-                        <li>Basic Workout Guidance</li>
+                        <li>Cardio Zone</li>
+                        <li>Locker Room</li>
+                        <li>Basic Guidance</li>
                     </ul>
-                    <p>
-                        Perfect for individuals starting their fitness journey or maintaining
-                        an active lifestyle.
-                    </p>
+                    <a href="#contact" class="btn-plan">Get Started</a>
                 </div>
 
                 <div class="price-card featured">
+                    <span class="badge">POPULAR</span>
                     <h3>Pro</h3>
-                    <p class="price">₹1999 / mo</p>
-                    <p>
-                        Designed for serious training with access to advanced equipment and
-                        structured group sessions.
-                    </p>
+                    <p class="price">&#8377;1999 <span>/ mo</span></p>
                     <ul>
-                        <li>All Strength & Cardio Equipment</li>
-                        <li>Group Training Sessions</li>
-                        <li>Personalized Diet Guidance</li>
+                        <li>All Equipment Access</li>
+                        <li>Group Sessions</li>
+                        <li>Diet Guidance</li>
                         <li>Monthly Progress Tracking</li>
+                        <li>A special woman trainer for womens</li>
                     </ul>
-                    <p>
-                        Best choice for members focused on fat loss, strength gains, and
-                        overall performance improvement.
-                    </p>
+                    <a href="#contact" class="btn-plan featured-btn">Get Started</a>
                 </div>
 
                 <div class="price-card">
                     <h3>Elite</h3>
-                    <p class="price">₹3499 / mo</p>
-                    <p>
-                        A premium coaching experience built for maximum results and
-                        personalized attention.
-                    </p>
+                    <p class="price">&#8377;3499 <span>/ mo</span></p>
                     <ul>
-                        <li>Dedicated Personal Coach</li>
-                        <li>Fully Customized Training Program</li>
-                        <li>Advanced Nutrition Planning</li>
-                        <li>Priority Support & Scheduling</li>
+                        <li>Personal Coach</li>
+                        <li>Custom Training Program</li>
+                        <li>Advanced Nutrition Plan</li>
+                        <li>Priority Support</li>
                     </ul>
-                    <p>
-                        Ideal for athletes, professionals, and individuals targeting elite-level
-                        transformation.
-                    </p>
+                    <a href="#contact" class="btn-plan">Get Started</a>
                 </div>
+
             </div>
         </section>
 
         <!-- REVIEWS -->
         <section id="reviews" class="reviews">
             <h2 class="section-title">ATHLETE REVIEWS</h2>
-
+            <p class="section-sub">Don't take our word for it. Hear from those who live it.</p>
             <div class="review-grid">
+
                 <div class="review-card">
-                    <p>
-                        "The best training environment I've ever experienced. 
-                        The structure, discipline, and energy here pushed me beyond 
-                        what I thought was possible. Every session feels purposeful."
-                    </p>
-                    <span>- Arjun, Amateur Powerlifter</span>
+                    <div class="reviewer-img">
+                        <img src="The_Best_Gym_Workout_Plan_For_Gaining_Muscle.webp" alt="Arjun" />
+                    </div>
+                    <p>"The best training environment I have ever experienced. Every session feels purposeful."</p>
+                    <span>&mdash; Arjun, Amateur Powerlifter</span>
                 </div>
 
                 <div class="review-card">
-                    <p>
-                        "I noticed visible strength gains within weeks. 
-                        The programs are progressive, well-planned, and never random. 
-                        Coaches constantly correct form and track performance."
-                    </p>
-                    <span>- Rohit, Strength Enthusiast</span>
+                    <div class="reviewer-img">
+                        <img src="fit_woman_doing_a_dumbbell_lunge_in_the_gym.webp" alt="Rohit" />
+                    </div>
+                    <p>"Visible strength gains within weeks. Coaches track form and performance every session."</p>
+                    <span>&mdash; Rohit, Strength Enthusiast</span>
                 </div>
 
                 <div class="review-card">
-                    <p>
-                        "What stood out to me is that the coaches actually care about results. 
-                        Nutrition, recovery, and mindset are treated as seriously as workouts."
-                    </p>
-                    <span>- Karthik, Transformation Client</span>
+                    <div class="reviewer-img">
+                        <img src="gym_about_bg.png" alt="Karthik" />
+                    </div>
+                    <p>"Nutrition, recovery, and mindset are treated as seriously as the workouts themselves."</p>
+                    <span>&mdash; Karthik, Transformation Client</span>
                 </div>
+
             </div>
         </section>
 
         <!-- CONTACT -->
         <section id="contact" class="contact">
-            <h2 class="section-title">CONTACT & LOCATION</h2>
-
+            <h2 class="section-title">CONTACT &amp; LOCATION</h2>
+            <p class="section-sub">Visit our premium facility or talk to our team.</p>
             <div class="contact-grid">
-                <!-- Timings -->
                 <div class="contact-card">
+                    <i data-lucide="clock"></i>
                     <h3>Working Hours</h3>
-                    <p><strong>Monday – Friday:</strong><br>5:00 AM – 10:00 PM</p>
-                    <p><strong>Saturday:</strong><br>6:00 AM – 9:00 PM</p>
+                    <p><strong>Mon &ndash; Fri:</strong><br>5:00 AM &ndash; 10:00 PM</p>
+                    <p><strong>Saturday:</strong><br>6:00 AM &ndash; 9:00 PM</p>
                     <p><strong>Sunday:</strong><br>Closed / Recovery Day</p>
                 </div>
-
-                <!-- Address -->
                 <div class="contact-card">
+                    <i data-lucide="map-pin"></i>
                     <h3>Training Facility</h3>
-                    <p>
-                        Elite Performance Gym<br>
-                        Anna Nagar, Chennai – 600040<br>
-                        Tamil Nadu, India
-                    </p>
-                    <p>Near Metro & Main Road Access</p>
+                    <p>Anna Nagar, Chennai &ndash; 600040</p>
+                    <p>Elite performance gear &middot; Recovery zone &middot; Expert staff</p>
                 </div>
-
-                <!-- Contact -->
                 <div class="contact-card">
+                    <i data-lucide="phone"></i>
                     <h3>Get In Touch</h3>
                     <p><strong>Phone:</strong><br>+91 98765 43210</p>
-                    <p><strong>Email:</strong><br>contact@eliteperformance.in</p>
+                    <p><strong>Email:</strong><br>contact@fitnessfreaks.in</p>
                     <p>DMs open on Instagram</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT (PREMIUM) -->
+        <section id="about" class="about-premium">
+            <div class="about-container">
+                <div class="about-info">
+                    <p class="hero-eyebrow" style="text-align:left; margin-bottom:10px;">OUR PHILOSOPHY</p>
+                    <h2 class="section-title" style="text-align:left; margin-bottom:30px;">THE SCIENCE OF<br><span
+                            class="gradient-text">DOMINATION</span></h2>
+                    <p class="about-text">At Fitness Freaks, we don't just train; we engineer performance. Our system is
+                        built on the three pillars of elite athleticism:</p>
+                    <div class="about-features">
+                        <div class="about-feat">
+                            <span>01</span>
+                            <div>
+                                <h4>Science-Backed</h4>
+                                <p>Every rep and set is optimized based on physiological data, not guesswork.</p>
+                            </div>
+                        </div>
+                        <div class="about-feat">
+                            <span>02</span>
+                            <div>
+                                <h4>Coach-Led</h4>
+                                <p>You're mentored by athletes who have mastered the mechanics of strength.</p>
+                            </div>
+                        </div>
+                        <div class="about-feat">
+                            <span>03</span>
+                            <div>
+                                <h4>Results-Driven</h4>
+                                <p>We track metrics that matter, ensuring you arrive at your peak and stay there.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="about-img-frame">
+                        <img src="1600w-fQ3Czvlw__M.webp" alt="Gym Interior" />
+                    </div>
                 </div>
             </div>
         </section>
 
     </main>
 
-<footer class="footer">
-    <section id="footer">
-    <div class="footer-content">
-        <div class="footer-about">
-            <h4>About</h4>
-            <p>
-                Elite performance training built for athletes and individuals who
-                demand real, measurable results.
-            </p>
-            <p>
-                We combine science-backed programming, disciplined execution,
-                and expert coaching to build long-term strength and resilience.
-            </p>
-            <p>
-                Elite Performance is a results-driven training facility built for athletes,
-                professionals, and serious fitness enthusiasts who demand more than
-                generic workouts.
-            </p>
-
-            <p>
-                Our programs are designed using proven sports science principles —
-                focusing on strength, fat loss, conditioning, mobility, and long-term
-                performance. Every session is structured with intent, progression,
-                and measurable outcomes.
-            </p>
-
-            <p>
-                With expert coaches, modern equipment, and a disciplined training
-                culture, we help individuals transform not just their physique,
-                but their mindset, consistency, and confidence.
-            </p>
-        </div>
-
-        <div class="footer-links">
-            <h4>Sections</h4>
-            <a href="#home">Home</a>
-            <a href="#services">Services</a>
-            <a href="#metrics">Metrics</a>
-            <a href="#coaches">Coaches</a>
-            <a href="#pricing">Price Packages</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#contact">Contact</a>
-        </div>
-
-        <div class="footer-social">
-            <h4>Connect</h4>
-            <p>Training tips, transformations & updates.</p>
-            <a href="#">Instagram</a>
-            <a href="#">YouTube</a>
-            <a href="#">Twitter / X</a>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>© 2026 Elite Performance Gym. All rights reserved.</p>
-    </div>
-    </section>
-</footer>
-
+    <!-- FOOTER -->
+    <footer class="footer">
+        <section id="footer-inner">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo" style="margin-bottom:20px;">
+                        <i data-lucide="dumbbell"></i>
+                        <span>FITNESS FREAKS</span>
+                    </div>
+                    <p>Domination starts from within. Join the elite community pushing the boundaries of human
+                        performance.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigate</h4>
+                    <div style="display:flex; flex-direction:column; gap:12px;">
+                        <a href="#home">Home</a>
+                        <a href="#metrics">Metrics</a>
+                        <a href="#services">Programs</a>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#coaches">Coaches</a>
+                        <a href="#transformations">Transformations</a>
+                        <a href="#pricing">Pricing</a>
+                        <a href="#reviews">Reviews</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div style="display:flex; flex-direction:column; gap:12px;">
+                        <a href="#" class="social-link instagram"><i data-lucide="instagram"></i> Instagram</a>
+                        <a href="#" class="social-link youtube"><i data-lucide="youtube"></i> YouTube</a>
+                        <a href="#" class="social-link twitter"><i data-lucide="twitter"></i> Twitter / X</a>
+                        <a href="#" class="social-link facebook"><i data-lucide="facebook"></i> Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Fitness Freaks. The Gold Standard of Chennai Gyms.</p>
+            </div>
+        </section>
+    </footer>
 
     <script src="main.js"></script>
 </body>
+
 </html>
